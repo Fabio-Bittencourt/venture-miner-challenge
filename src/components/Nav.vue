@@ -2,9 +2,9 @@
 </script>
 
 <template>
-  <nav>
-    <ul class="flex justify-between">
-      <li>
+  <nav class="">
+    <ul class="flex justify-between text-white font-semibold">
+      <li class="">
         <RouterLink to="/">Home</RouterLink>
       </li>
       <li>

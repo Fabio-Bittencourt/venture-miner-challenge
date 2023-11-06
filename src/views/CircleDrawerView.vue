@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="grid place-items-center">
     Circle
     <CircleDrawer />
   </section>

@@ -1,4 +1,5 @@
 <template>
+
   <label
     >Elapsed Time: <progress :value="progressRate"></progress
   ></label>

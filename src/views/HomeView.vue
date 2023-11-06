@@ -1,5 +1,5 @@
 <template>
-  <section class="grid h-screen place-items-center">
+  <section class="grid place-items-center">
       Home
   </section>
 </template>

@@ -1,6 +1,5 @@
 <template>
-  <section class="grid h-screen place-items-center">
-    <h1>Temperature</h1>
+  <section class="grid place-items-center">
     <TemperatureConversor />
   </section>
 </template>

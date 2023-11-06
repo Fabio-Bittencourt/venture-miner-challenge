@@ -4,7 +4,7 @@ import Nav from './components/Nav.vue'
 </script>
 
 <template>
-  <header>
+  <header class="p-4 mb-4 bg-lime-500 shadow">
     <Nav />
   </header>
   <RouterView />

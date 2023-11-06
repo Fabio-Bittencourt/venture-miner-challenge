@@ -1,18 +1,29 @@
 <template>
-  <div><input v-model="prefix" placeholder="Filter prefix"></div>
+  <section class="grid gap-4">
+    <div class="grid grid-rows-2 gap-2">
+      <input v-model="prefix" class="input-default" placeholder="Filter prefix">
 
-  <select size="5" v-model="selected">
-    <option v-for="name in filteredNames" :key="name">{{ name }}</option>
-  </select>
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" class="input-default" v-model="first" />
 
-  <label>Name: <input v-model="first"></label>
-  <label>Surname: <input v-model="last"></label>
+        <label for="surname">Surname:</label>
+        <input id="surname" class="input-default" v-model="last" />
+      </div>
+    </div>
 
-  <div class="buttons">
-    <button @click="create">Create</button>
-    <button @click="update">Update</button>
-    <button @click="del">Delete</button>
-  </div>
+    <div class="">
+      <select size="5" v-model="selected" class="input-default w-full">
+        <option v-for="name in filteredNames" :key="name">{{ name }}</option>
+      </select>
+    </div>
+
+    <div class="buttons grid sm:grid-cols-3 justify-items-center">
+      <button @click="create" class="button-primary">Create</button>
+      <button @click="update" class="button-primary">Update</button>
+      <button @click="del" class="button-primary">Delete</button>
+    </div>
+  </section>
 </template>
 
 <script setup>

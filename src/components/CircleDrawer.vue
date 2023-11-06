@@ -18,8 +18,8 @@
   </svg>
 
   <div class="controls">
-    <button @click="undo" :disabled="index <= 0">Undo</button>
-    <button @click="redo" :disabled="index >= history.length - 1">Redo</button>
+    <button class="button-primary" @click="undo" :disabled="index <= 0">Undo</button>
+    <button class="button-primary" @click="redo" :disabled="index >= history.length - 1">Redo</button>
   </div>
 
   <div class="dialog" v-if="adjusting" @click.stop>

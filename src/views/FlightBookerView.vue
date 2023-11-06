@@ -1,6 +1,5 @@
 <template>
-  <section class="grid h-screen place-items-center">
-    Flight Booker
+  <section class="grid place-items-center">
     <FlightBooker />
   </section>
 </template>

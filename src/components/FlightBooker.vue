@@ -1,15 +1,21 @@
 <template>
-  <select v-model="flightType">
-    <option value="one-way flight">One-way Flight</option>
-    <option value="return flight">Return Flight</option>
-  </select>
+  <section class="grid grid-cols-1 justify-items-center">
+    <div class="grid md:grid-cols-3 gap-10 justify-items-center">
+      <select v-model="flightType">
+        <option value="one-way flight">One-way Flight</option>
+        <option value="return flight">Return Flight</option>
+      </select>
+      <input class="input-default" type="date" v-model="departureDate">
+      <input class="input-default" type="date" v-model="returnDate" :disabled="!isReturn">
+    </div>
+    <div class="col-span-3 text-center font-semibold my-4 text-lime-700">
+      <p>{{ canBook ? '' : 'Return date must be after departure date.' }}</p>
+    </div>
+    <div class="col-span-3">
+      <button class="button-primary" :disabled="!canBook" @click="book">Book</button>
+    </div>
 
-  <input type="date" v-model="departureDate">
-  <input type="date" v-model="returnDate" :disabled="!isReturn">
-
-  <button :disabled="!canBook" @click="book">Book</button>
-
-  <p>{{ canBook ? '' : 'Return date must be after departure date.' }}</p>
+  </section>
 </template>
 
 <script setup>

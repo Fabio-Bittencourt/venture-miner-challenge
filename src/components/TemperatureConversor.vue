@@ -1,12 +1,12 @@
 <template>
-  <section>
-    <div>
-      <label for="">Celsius</label>
-      <input type="number" :value="c" @change="setC">
+  <section class="grid gap-4 md:grid-cols-2">
+    <div class="">
+      <label for="celsius">Celsius</label>
+      <input id="celsius" class="input-default" type="number" :value="c" @change="setC">
     </div>
-    <div>
-      <label for="">Fahrenheit</label>
-      <input type="number" :value="f" @change="setF">
+    <div class="">
+      <label for="fahrenheit">Fahrenheit</label>
+      <input id="fahrenheit" class="input-default" type="number" :value="f" @change="setF">
     </div>
   </section>
 </template>
