@@ -18,7 +18,7 @@
       </select>
     </div>
 
-    <div class="buttons grid sm:grid-cols-3 justify-items-center">
+    <div class="grid sm:grid-cols-3 justify-items-center">
       <button @click="create" class="button-primary">Create</button>
       <button @click="update" class="button-primary">Update</button>
       <button @click="del" class="button-primary">Delete</button>

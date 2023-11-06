@@ -1,6 +1,5 @@
 <template>
-  <section class="grid h-screen place-items-center">
-    Timer
+  <section class="grid place-items-center gap-5">
     <Timer />
   </section>
 </template>

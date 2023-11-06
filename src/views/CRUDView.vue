@@ -1,6 +1,5 @@
 <template>
   <section class="grid place-items-center">
-    CRUD
     <CRUD />
   </section>
 </template>

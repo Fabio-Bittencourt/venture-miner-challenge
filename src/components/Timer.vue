@@ -1,17 +1,17 @@
 <template>
+  <div class="font-bold text-9xl">{{ (elapsed / 1000).toFixed(1) }}s</div>
+  <div class="grid grid-rows-2 gap-4">
+    <div>
+      <label>Elapsed Time: <progress :value="progressRate"></progress>
+      </label>
+    </div>
 
-  <label
-    >Elapsed Time: <progress :value="progressRate"></progress
-  ></label>
-
-  <div>{{ (elapsed / 1000).toFixed(1) }}s</div>
-
-  <div>
-    Duration: <input type="range" v-model="duration" min="1" max="30000">
-    {{ (duration / 1000).toFixed(1) }}s
+    <div>
+      Duration: <input type="range" v-model="duration" min="1" max="30000">
+      {{ (duration / 1000).toFixed(1) }}s
+    </div>
   </div>
-
-  <button @click="reset">Reset</button>
+  <button class="button-primary" @click="reset">Reset</button>
 </template>
 
 <script setup>
